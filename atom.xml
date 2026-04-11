@@ -9,13 +9,13 @@
   <link href="https://hellotqe.github.io/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, hellotqe</rights>
   <title>保持思考 坚持不懈</title>
-  <updated>2026-04-11T16:02:01.974Z</updated>
+  <updated>2026-04-11T16:14:49.654Z</updated>
   <entry>
     <author>
       <name>hellotqe</name>
     </author>
     <content>
-      <![CDATA[<h1 id="Condition"><a href="#Condition" class="headerlink" title="@Condition"></a>@Condition</h1><p>根据满足的条件来完成对Bean的加载</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target(&#123;ElementType.TYPE, ElementType.METHOD&#125;)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Conditional &#123;</span><br><span class="line">    Class&lt;? <span class="keyword">extends</span> <span class="title class_">Condition</span>&gt;[] value();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>唯一的成员变量,表示数组内的condition 接口的match方法都返回true,才能加载这个bean。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Condition</span> &#123;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">matches</span><span class="params">(ConditionContext var1, AnnotatedTypeMetadata var2)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="条件注解的衍生注解"><a href="#条件注解的衍生注解" class="headerlink" title="条件注解的衍生注解"></a>条件注解的衍生注解</h2><p>以下是条件注解的衍生注解<br><img src="/source/upload/%E6%9D%A1%E4%BB%B6%E6%B3%A8%E8%A7%A3%E7%9A%84%E8%A1%8D%E7%94%9F.png" alt="条件注解衍生注解"></p>]]>
+      <![CDATA[<h1 id="Condition"><a href="#Condition" class="headerlink" title="@Condition"></a>@Condition</h1><p>根据满足的条件来完成对Bean的加载</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target(&#123;ElementType.TYPE, ElementType.METHOD&#125;)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Conditional &#123;</span><br><span class="line">    Class&lt;? <span class="keyword">extends</span> <span class="title class_">Condition</span>&gt;[] value();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>唯一的成员变量,表示数组内的condition 接口的match方法都返回true,才能加载这个bean。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Condition</span> &#123;</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">matches</span><span class="params">(ConditionContext var1, AnnotatedTypeMetadata var2)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="条件注解的衍生注解"><a href="#条件注解的衍生注解" class="headerlink" title="条件注解的衍生注解"></a>条件注解的衍生注解</h2><p>以下是条件注解的衍生注解<br><img src="/upload/%E6%9D%A1%E4%BB%B6%E6%B3%A8%E8%A7%A3%E7%9A%84%E8%A1%8D%E7%94%9F.png" alt="条件注解衍生注解"></p>]]>
     </content>
     <id>https://hellotqe.github.io/2026/04/11/Condition/</id>
     <link href="https://hellotqe.github.io/2026/04/11/Condition/"/>
@@ -25,14 +25,14 @@
 <figure class="hi]]>
     </summary>
     <title>condition 注解</title>
-    <updated>2026-04-11T16:02:01.974Z</updated>
+    <updated>2026-04-11T16:14:49.654Z</updated>
   </entry>
   <entry>
     <author>
       <name>hellotqe</name>
     </author>
     <content>
-      <![CDATA[<h1 id="核心运行原理"><a href="#核心运行原理" class="headerlink" title="核心运行原理"></a>核心运行原理</h1><p>你只需要引入对应的starters,springboot启动时候会自动加载相关的依赖，配置相应的初始化参数，以最简化的形式对第三方软件进行继承。<br><img src="/source/upload/springboot%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86.png" alt="springboot核心原理图"><br>描述了Springboot自动配置功能运作过程中涉及的几个核心功能以及相互之间的关系。</p><p>描述过程：Springboot 通过@EnableAutoConfig注解开启自动配置，加载Spring.factories中注册的各种AutoConfiguration类，当某个AutoConfiguration类满足其注解@Conditional指定的生效条件(starters提供的依赖，配置或者Spring容器中是否存在某个Bean)，实例化该AutoConfiguration类中定义的Bean组件，并且注入到Spring容器中，</p><ul><li>@EnableAutoConfiguration; 扫描各个jar包下的Spring.factories文件，并且加载文件中注册的AutoConfiguration</li><li>Spring.factories: 配置文件,位于 jar包下的Meta-INF目录下。</li></ul>]]>
+      <![CDATA[<h1 id="核心运行原理"><a href="#核心运行原理" class="headerlink" title="核心运行原理"></a>核心运行原理</h1><p>你只需要引入对应的starters,springboot启动时候会自动加载相关的依赖，配置相应的初始化参数，以最简化的形式对第三方软件进行继承。<br><img src="/upload/springboot%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86.png" alt="springboot核心原理图"><br>描述了Springboot自动配置功能运作过程中涉及的几个核心功能以及相互之间的关系。</p><p>描述过程：Springboot 通过@EnableAutoConfig注解开启自动配置，加载Spring.factories中注册的各种AutoConfiguration类，当某个AutoConfiguration类满足其注解@Conditional指定的生效条件(starters提供的依赖，配置或者Spring容器中是否存在某个Bean)，实例化该AutoConfiguration类中定义的Bean组件，并且注入到Spring容器中，</p><ul><li>@EnableAutoConfiguration; 扫描各个jar包下的Spring.factories文件，并且加载文件中注册的AutoConfiguration</li><li>Spring.factories: 配置文件,位于 jar包下的Meta-INF目录下。</li></ul>]]>
     </content>
     <id>https://hellotqe.github.io/2026/04/11/springboot/</id>
     <link href="https://hellotqe.github.io/2026/04/11/springboot/"/>
@@ -41,7 +41,7 @@
       <![CDATA[<h1 id="核心运行原理"><a href="#核心运行原理" class="headerlink" title="核心运行原理"></a>核心运行原理</h1><p>你只需要引入对应的starters,springboot启动时候会自动加载相关的依赖，配置相应的初始化参数，]]>
     </summary>
     <title>springboot 的核心运行原理</title>
-    <updated>2026-04-11T14:03:12.550Z</updated>
+    <updated>2026-04-11T16:14:49.641Z</updated>
   </entry>
   <entry>
     <author>
