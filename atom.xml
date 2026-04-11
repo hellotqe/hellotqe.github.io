@@ -9,7 +9,23 @@
   <link href="https://hellotqe.github.io/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, hellotqe</rights>
   <title>保持思考 坚持不懈</title>
-  <updated>2026-04-11T05:29:56.549Z</updated>
+  <updated>2026-04-11T14:03:12.550Z</updated>
+  <entry>
+    <author>
+      <name>hellotqe</name>
+    </author>
+    <content>
+      <![CDATA[<h1 id="核心运行原理"><a href="#核心运行原理" class="headerlink" title="核心运行原理"></a>核心运行原理</h1><p>你只需要引入对应的starters,springboot启动时候会自动加载相关的依赖，配置相应的初始化参数，以最简化的形式对第三方软件进行继承。<br><img src="/source/upload/springboot%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86.png" alt="springboot核心原理图"><br>描述了Springboot自动配置功能运作过程中涉及的几个核心功能以及相互之间的关系。</p><p>描述过程：Springboot 通过@EnableAutoConfig注解开启自动配置，加载Spring.factories中注册的各种AutoConfiguration类，当某个AutoConfiguration类满足其注解@Conditional指定的生效条件(starters提供的依赖，配置或者Spring容器中是否存在某个Bean)，实例化该AutoConfiguration类中定义的Bean组件，并且注入到Spring容器中，</p><ul><li>@EnableAutoConfiguration; 扫描各个jar包下的Spring.factories文件，并且加载文件中注册的AutoConfiguration</li><li>Spring.factories: 配置文件,位于 jar包下的Meta-INF目录下。</li></ul>]]>
+    </content>
+    <id>https://hellotqe.github.io/2026/04/11/springboot/</id>
+    <link href="https://hellotqe.github.io/2026/04/11/springboot/"/>
+    <published>2026-04-11T13:46:59.191Z</published>
+    <summary>
+      <![CDATA[<h1 id="核心运行原理"><a href="#核心运行原理" class="headerlink" title="核心运行原理"></a>核心运行原理</h1><p>你只需要引入对应的starters,springboot启动时候会自动加载相关的依赖，配置相应的初始化参数，]]>
+    </summary>
+    <title>springboot 的核心运行原理</title>
+    <updated>2026-04-11T14:03:12.550Z</updated>
+  </entry>
   <entry>
     <author>
       <name>hellotqe</name>
